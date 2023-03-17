@@ -1,5 +1,9 @@
 package com.eoi.springboot.entidades;
 import jakarta.persistence.*;
+
+/**
+ * The type Entidad usuario.
+ */
 @Entity
 
 @Table(name="Usuario")
@@ -22,28 +26,63 @@ public class EntidadUsuario {
         private Integer id;
         private String name;
         private String email;
-        public Integer getId() {
+
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
+    public Integer getId() {
 
             return id;
         }
-        public void setId(Integer id) {
+
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
+    public void setId(Integer id) {
 
             this.id = id;
         }
-        public String getName() {
+
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
+    public String getName() {
 
             return name;
         }
-        public void setName(String name) {
+
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
 
             this.name = name;
         }
 
-        public String getEmail() {
+    /**
+     * Gets email.
+     *
+     * @return the email
+     */
+    public String getEmail() {
 
             return email;
         }
-        public void setEmail(String email) {
+
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
+    public void setEmail(String email) {
 
             this.email = email;
         }
