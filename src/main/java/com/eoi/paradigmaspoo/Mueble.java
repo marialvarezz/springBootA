@@ -1,21 +1,32 @@
-package com.eoi.paradigmasPOO;
+package com.eoi.paradigmaspoo;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.log4j.Log4j2;
+
 
 /**
  * The type Mueble.
  */
 @Component
+@Log4j2
 public abstract class Mueble extends ObjetoFisico {
+
+    /**
+     * Se utiliza para grabar la habitación donde se encuentra el mueble.
+     */
 
     private String habitacion;
 
     /**
      * The Componentes.
      */
+
+
     protected List<ComponenteDeMueble> componentes = new ArrayList<>();
 
 
@@ -67,6 +78,9 @@ public abstract class Mueble extends ObjetoFisico {
         this.componentes = componentes;
     }
 
+    /**
+     * El metodo showInfo muestra la información básica de un mueble
+     */
     @Override
     public void showInfo() {
         System.out.println("FICHA DE MUEBLE");
@@ -77,5 +91,17 @@ public abstract class Mueble extends ObjetoFisico {
             ObjetoFisico o =  n;
             o.showInfo();
         });
+    }
+
+    /**
+     * Pintar mueble
+     * @param color - El color solo está disponible en amarillo, rojo, azul y verde
+     * @return Devuelve un mensaje confirmando el color pintado
+     */
+    public String pintarMueble(String color){
+        log.warn("El mueble ha sido pintado");
+        return "El mueble ha sido pintado de " + color;
+
+
     }
 }

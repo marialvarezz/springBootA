@@ -9,21 +9,30 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
-
-
+/**
+ * The type My spring boot aplication.
+ */
 @SpringBootApplication
 @RestController
 public class MySpringBootAplication {
 
 
-		public static void main(String[] args) {
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 */
+	public static void main(String[] args) {
 			SpringApplication.run(MySpringBootAplication.class, args);
 		}
 
 
-
-		@GetMapping("/")
+	/**
+	 * Hello main string.
+	 *
+	 * @return the string
+	 */
+	@GetMapping("/")
 		String helloMain() {
 			return "Main class";
 		}

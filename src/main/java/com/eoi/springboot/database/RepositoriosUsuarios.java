@@ -3,6 +3,9 @@ import com.eoi.springboot.entidades.EntidadUsuario;
 
 import org.springframework.data.repository.CrudRepository;
 
+/**
+ * The interface Repositorios usuarios.
+ */
 public interface RepositoriosUsuarios extends CrudRepository<EntidadUsuario, Integer> {
 
 

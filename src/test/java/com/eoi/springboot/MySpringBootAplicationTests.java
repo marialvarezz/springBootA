@@ -10,6 +10,9 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.ResponseEntity;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+/**
+ * The type My spring boot aplication tests.
+ */
 @SpringBootTest(classes = MySpringBootAplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Log4j2
 class MySpringBootAplicationTests {
@@ -20,18 +23,12 @@ class MySpringBootAplicationTests {
 		private TestRestTemplate template;
 
 
-
-		/**
-
-		 * Hello main.
-
-		 *
-
-		 * @throws Exception the exception
-
-		 */
-
-		@Test
+    /**
+     * Hello main.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 
 		void hello_main() throws Exception {
 
@@ -42,9 +39,12 @@ class MySpringBootAplicationTests {
 		}
 
 
-
-
-		@Test
+    /**
+     * Hello hola.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 
 		void hello_hola() throws Exception {
 
